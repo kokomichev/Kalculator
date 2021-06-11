@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="style1.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="script" href="kalkscript.js" >
+<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <body>
+	<div class="container">
+		<div class="title">
+			<div class="toggle">
+				<h3>Kalculator</h3>
+				<div class="right">
+					<p id="one">I</p>
+					<p id="two">II</p>
+					<p id="three">III</p>
+				</div>
+			</div>
+			<div class="control">
+				<p>THEME: </p>
+				<div class="box">
+					<div id="circle"></div>
+				</div>
+			</div>
+		</div>
+		<div class="screen">
+			<form name="calc">
+				<input type="text" name="text" readonly id="screen">
+			</form>
+		</div>
+		<div class="cal-body">
+			<div class="butt">
+				<button class="num" onclick="document.calc.text.value+='7'">7</button>
+				<button class="num" onclick="document.calc.text.value+='8'">8</button>
+				<button class="num" onclick="document.calc.text.value+='9'">9</button>
+				<button class="del" onclick="del()">Del.</button>
+				<button class="num" onclick="document.calc.text.value+='4'">4</button>
+				<button class="num" onclick="document.calc.text.value+='5'">5</button>
+				<button class="num" onclick="document.calc.text.value+='6'">6</button>
+				<button onclick="document.calc.text.value+='+'">+</button>
+				<button class="num" onclick="document.calc.text.value+='1'">1</button>
+				<button class="num" onclick="document.calc.text.value+='2'">2</button>
+				<button class="num" onclick="document.calc.text.value+='3'">3</button>
+				<button onclick="document.calc.text.value+='-'">-</button>
+				<button onclick="document.calc.text.value+='.'">0.</button>
+				<button class="num" onclick="document.calc.text.value+='0'">0</button>
+				<button onclick="document.calc.text.value+='/'">÷</button>
+				<button onclick="document.calc.text.value+='*'">x</button>
+				<button class="reset" onclick="document.calc.text.value=''">C</button>
+				<button class="equal" onclick="document.calc.text.value= eval(calc.text.value)">=</button>
+			</div>
+		</div>
+	</div>
+	<script src="kalkscript.js"></script>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Koko Michev</a>.
+  </div>
+</body>
+</html>
